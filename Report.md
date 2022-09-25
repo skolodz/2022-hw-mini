@@ -1,0 +1,9 @@
+Stacia Kolodziejski 
+EC463 HW Miniproject 
+9/25/2022
+LED Fade: Raspberry Pi Pico
+
+	My goal for this project was to change the speed at which the fade happens on the LED. To do this I played around with the brightness along with the fade variable and the going_up variable. The first changes I made were I switched the going_up variable to start as false instead of true. I thought by doing this that the led fade pattern would change if the if-else loop in the code was reversed. However, it turns out that this change was not as impactful as I thought it would be and the led fade speed was overall pretty similar without too many changes. I then changed the value of the fade variable. I change the fade variable to a value of 100 instead of 0. This change also turned out to be less impactful on the speed of the fade. I realized that this was because the fade variable only goes up or down by one no matter what the starting value is, therefore changing the starting value does not change the speed by which it goes up or down. 
+	The last change I tried to make was changing the value of the minimum led brightness variable meaning that the led would not go all the way off in between fades; it would only get more dim and bright at a certain speed. This turned out to change the speed of the fade as I thought it would. 
+	I measured the speed at which the fade occurred in the original code with the original value of the minimum brightness and I concluded that the fade happens about every second. I counted 10 fades in 10 seconds which makes sense. I then measured the speed of the fade in the same 10 seconds when the minimum led brightness was at a value of 100. I concluded that this speed was almost double the speed of the original with 17 fades in 10 seconds. I then tried to change the minimum brightness even more to 175 and this almost tripled the original speed of the fade. I measured 29 fades in 10 seconds. 
+
