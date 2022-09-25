@@ -21,11 +21,11 @@
 #endif
 
 #define MAX_LED_BRIGHTNESS 255
-#define MIN_LED_BRIGHTNESS 0
+#define MIN_LED_BRIGHTNESS 100
 
 void on_pwm_wrap() {
 // this is the interrupt handler, called each time the PWM counter wraps
-    static int fade = 100;
+    static int fade = 0;
     static bool going_up = true;
     // Clear the interrupt flag that brought us here
     pwm_clear_irq(pwm_gpio_to_slice_num(PICO_DEFAULT_LED_PIN));
